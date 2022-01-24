@@ -3,14 +3,19 @@
   <h1><p><b>{{result.name}}</b></p></h1>
  
     <img :src="'http://openweathermap.org/img/w/'+result.weather[0].icon+'.png' " alt=" ">
-    <p>{{ result.weather[0].description }}</p>
-    <p>Weather: {{ result.main.weather }}</p>
+    <p>Weather: {{ result.weather[0].description }}</p>
+    <p>Temperature: {{ result.main.temp }}</p>
+    <p>Pressure: {{ result.main.pressure }}</p>
+    <p>Humidity: {{ result.main.humidity }}</p>    
     <p>Degrees: {{ result.wind.deg }}</p>
-    <p>Pressure: {{ result.temp.pressure }}</p>
-    <p>Humidity: {{ result.temp.humidity }}</p>
+    <p>Coord (Lon): {{ result.coord.lon }}</p>
+    <p>Coord (Lat): {{ result.coord.lat }}</p>
     
   </div>
 </template>
+<style>
+
+</style>
 
 <script>
 import axios from "axios";
